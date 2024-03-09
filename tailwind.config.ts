@@ -8,10 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      backgroundImage: () => ({
+        heroDesktop: `url(/images/hero-desktop-1x.png)`,
+        heroTablet: `url(/images/hero-tablet-1x.png)`,
+        heroMobile: `url(/images/hero-mobile-1x.png)`,
+      }),
+      screens: {
+        xs: "375px",
+        sm: "834px",
+        lg: "1440px",
       },
     },
   },
