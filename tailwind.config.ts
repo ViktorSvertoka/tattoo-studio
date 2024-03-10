@@ -27,6 +27,11 @@ const config: Config = {
         orange: "#FF6C00",
         lightOrange: "rgba(255, 108, 0, 0.3)",
       },
+      fontFamily: {
+        rye: ["Rye", "serif"],
+        playfair: ["Playfair Display", "serif"],
+        orelenga: ["Orelega One", "serif"],
+      },
     },
   },
   plugins: [],
