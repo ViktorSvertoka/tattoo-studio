@@ -4,6 +4,7 @@ const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -17,6 +18,14 @@ const config: Config = {
         xs: "375px",
         sm: "834px",
         lg: "1440px",
+      },
+      colors: {
+        white: "#F5F3F3",
+        gray: "#888888",
+        darkGray: "#263238",
+        black: "#15161E",
+        orange: "#FF6C00",
+        lightOrange: "rgba(255, 108, 0, 0.3)",
       },
     },
   },
