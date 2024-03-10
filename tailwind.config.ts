@@ -30,7 +30,7 @@ const config: Config = {
       fontFamily: {
         rye: ["Rye", "serif"],
         playfair: ["Playfair Display", "serif"],
-        orelenga: ["Orelega One", "serif"],
+        orelega: ["Orelega One", "serif"],
       },
     },
   },
