@@ -1,12 +1,37 @@
 const Navbar = () => {
   return (
-    <nav className="text-white">
+    <nav>
       <div className="flex lg:gap-10 lg:pt-5 lg:pb-5">
-        <a href="#">About</a>
-        <a href="#">Artists</a>
-        <a href="#">Gallery</a>
-        <a href="#">Prices</a>
-        <a href="#">Contacts</a>
+        <a
+          href="#"
+          className="text-white font-playfair lg:text-[20px] font-medium leading-[30px] hover:text-[darkOrange]"
+        >
+          About
+        </a>
+        <a
+          href="#"
+          className="text-white font-playfair lg:text-[20px] font-medium leading-[30px] hover:text-[darkOrange]"
+        >
+          Artists
+        </a>
+        <a
+          href="#"
+          className="text-white font-playfair lg:text-[20px] font-medium leading-[30px] hover:text-[darkOrange]"
+        >
+          Gallery
+        </a>
+        <a
+          href="#"
+          className="text-white font-playfair lg:text-[20px] font-medium leading-[30px] hover:text-[darkOrange]"
+        >
+          Prices
+        </a>
+        <a
+          href="#"
+          className="text-white font-playfair lg:text-[20px] font-medium leading-[30px] hover:text-[darkOrange]"
+        >
+          Contacts
+        </a>
       </div>
     </nav>
   );

@@ -13,11 +13,11 @@ const Hero = () => {
           GOOD LUCK TATTOO STUDIO
         </h1>
         <p className="text-white font-playfair lg:text-[24px] lg:pt-[37px] lg:w-[361px] leading-[36px] font-normal">
-          "Tattoos are an expression of freedom and individuality."
+          &quot;Tattoos are an expression of freedom and individuality.&quot;
         </p>
         <button
           type="button"
-          className="text-black bg-[darkOrange] lg:text-[24px] lg:w-[300px] lg:rounded-[50px] py-4 flex items-center justify-center mb-[283px] mt-[63px] "
+          className="text-black hover:text-[darkOrange] bg-[darkOrange] hover:bg-transparent border-2 hover:border-2 border-[black] hover:border-[darkOrange] lg:text-[24px] lg:w-[300px] lg:rounded-[50px] py-4 flex items-center justify-center mb-[280px] mt-[63px] "
         >
           Online-booking
         </button>
