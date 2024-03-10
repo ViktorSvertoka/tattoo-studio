@@ -24,7 +24,7 @@ const config: Config = {
         gray: "#888888",
         darkGray: "#263238",
         black: "#15161E",
-        orange: "#FF6C00",
+        darkOrange: "#FF6C00",
         lightOrange: "rgba(255, 108, 0, 0.3)",
       },
       fontFamily: {
