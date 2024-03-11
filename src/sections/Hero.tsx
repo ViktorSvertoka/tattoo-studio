@@ -9,7 +9,7 @@ const Hero = () => {
           <Logo width={36} height={36} />
           <Navbar />
         </div>
-        <h1 className="text-white font-rye lg:text-[80px] lg:pt-[250px] lg:w-[707px] leading-[80px] font-normal">
+        <h1 className="text-white font-rye lg:text-[80px] lg:mt-[155px] lg:w-[707px] leading-[80px] font-normal">
           GOOD LUCK TATTOO STUDIO
         </h1>
         <p className="text-white font-playfair lg:text-[24px] lg:pt-[37px] lg:w-[361px] leading-[36px] font-normal">
@@ -17,7 +17,7 @@ const Hero = () => {
         </p>
         <button
           type="button"
-          className="text-black hover:text-[darkOrange] bg-[darkOrange] hover:bg-transparent border-2 hover:border-2 border-[black] hover:border-[darkOrange] lg:text-[24px] lg:w-[300px] lg:rounded-[50px] py-4 flex items-center justify-center mb-[280px] mt-[63px] "
+          className="text-black hover:text-[darkOrange] bg-[darkOrange] hover:bg-transparent border-2 hover:border-2 border-[black] hover:border-[darkOrange] lg:text-[24px] lg:w-[300px] lg:rounded-[50px] py-4 flex items-center justify-center mb-[267px] mt-[63px]"
         >
           Online-booking
         </button>
