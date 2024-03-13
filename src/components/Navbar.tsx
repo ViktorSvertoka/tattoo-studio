@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <nav>
-      <div className="flex lg:gap-10 lg:pt-5 lg:pb-5">
+      <div className="flex sm:gap-[32px] lg:gap-[38px] lg:pt-[19px] lg:pb-5">
         <a
           href="#"
           className="text-white font-playfair lg:text-[20px] font-medium leading-[30px] hover:text-[darkOrange]"

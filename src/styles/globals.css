@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Orelega+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   background-color: #15161e;
   min-height: 100vh;
   width: 100%;
@@ -66,6 +66,7 @@ h6 {
   .container {
     width: 834px;
     margin: 0 auto;
+    padding: 0 32px;
   }
 }
 
