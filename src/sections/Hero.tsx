@@ -9,10 +9,10 @@ const Hero = () => {
           <Logo width={36} height={36} />
           <Navbar />
         </div>
-        <h1 className="text-white font-rye sm:text-[64px] sm:mt-[670px] sm:w-[566px] sm:leading-[72px] lg:text-[80px] lg:mt-[155px] lg:w-[707px] lg:leading-[80px] font-normal">
+        <h1 className="text-white font-rye xs:text-[36px] xs:mt-[508px] xs:w-[320px] xs:leading-[36px] xs:text-center sm:text-[64px] sm:mt-[670px] sm:w-[566px] sm:leading-[72px] lg:text-[80px] lg:mt-[155px] lg:w-[707px] lg:leading-[80px] font-normal">
           GOOD LUCK TATTOO STUDIO
         </h1>
-        <p className="text-white font-playfair sm:text-[24px] sm:pt-[40px] sm:w-[361px] sm:leading-[36px] lg:text-[24px] lg:pt-[37px] lg:w-[361px] lg:leading-[36px] font-normal">
+        <p className="text-white font-playfair xs:text-[16px] xs:pt-[20px] xs:w-[248px] xs:leading-[24px] xs:text-center sm:text-[24px] sm:pt-[40px] sm:w-[361px] sm:leading-[36px] lg:text-[24px] lg:pt-[37px] lg:w-[361px] lg:leading-[36px] font-normal">
           &quot;Tattoos are an expression of freedom and individuality.&quot;
         </p>
         <button

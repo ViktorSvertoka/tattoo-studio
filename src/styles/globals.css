@@ -59,6 +59,7 @@ h6 {
   .container {
     width: 375px;
     margin: 0 auto;
+    padding: 16px 16px 0 16px;
   }
 }
 
