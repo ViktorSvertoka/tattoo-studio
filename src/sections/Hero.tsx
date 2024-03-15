@@ -18,7 +18,7 @@ const Hero = () => {
         </p>
         <button
           type="button"
-          className="text-black hover:text-[darkOrange] bg-[darkOrange] hover:bg-transparent border-2 hover:border-2 border-[black] hover:border-[darkOrange] text-[24px] xs:w-[343px] sm:w-[300px] lg:w-[300px] rounded-[50px] py-4 flex items-center justify-center xs:mb-[26px] sm:mb-[150px] lg:mb-[267px] mt-[63px]"
+          className="text-black hover:text-[darkOrange] bg-[darkOrange] hover:bg-transparent border-transparent border-2 hover:border-2 border-[black] hover:border-[darkOrange] text-[24px] xs:w-[343px] sm:w-[300px] lg:w-[300px] rounded-[50px] py-4 flex items-center justify-center xs:mb-[26px] sm:mb-[150px] lg:mb-[267px] mt-[63px]"
         >
           Online-booking
         </button>
