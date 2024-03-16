@@ -6,7 +6,9 @@ const Hero = () => {
     <section className="w-full h-full flex flex-col bg-heroMobile sm:bg-heroTablet lg:bg-heroDesktop bg-cover bg-center">
       <div className="container">
         <div className="flex items-center justify-between sm:pt-[19px]">
-          <Logo width={36} height={36} />
+          <a href="#">
+            <Logo width={36} height={36} />
+          </a>
           <Navbar />
         </div>
 
