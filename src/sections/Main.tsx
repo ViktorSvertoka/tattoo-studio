@@ -1,7 +1,8 @@
-import About from './About';
 import Hero from './Hero';
+import About from './About';
 import Services from './Services';
 import Team from './Team';
+import Choose from './Choose';
 
 const Main = () => {
   return (
@@ -10,6 +11,7 @@ const Main = () => {
       <About />
       <Services />
       <Team />
+      <Choose />
     </>
   );
 };
