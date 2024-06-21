@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import Logo from '../../public/icons/logo.svg';
+import Menu from '../../public/icons/mobile-menu.svg';
 
 const Hero = () => {
   return (
@@ -10,6 +11,9 @@ const Hero = () => {
             <Logo width={36} height={36} />
           </a>
           <Navbar />
+          <button className="md:hidden" type="button">
+            <Menu width={36} height={36} />
+          </button>
         </div>
 
         <h1 className="text-white font-rye xs:text-[36px] xs:mt-[508px] xs:w-[320px] xs:leading-[36px] xs:text-center sm:text-left lg:text-left sm:text-[64px] sm:mt-[670px] sm:w-[566px] sm:leading-[72px] lg:text-[80px] lg:mt-[155px] lg:w-[707px] lg:leading-[80px] font-normal xs:mx-auto sm:mx-0 lg:mx-0">
