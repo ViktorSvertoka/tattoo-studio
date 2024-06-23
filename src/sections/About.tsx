@@ -46,8 +46,8 @@ const About = () => {
             </p>
             <p className="text-gray xs:mt-[8px] sm:mt-[16px] lg:mt-[16px] xs:text-[16px] sm:text-[20px] lg:text-[20px]">
               At Good Luck Tattoo Studio, we understand the significance of a
-              tattoo as a lifelong commitment. That's why we take the time to
-              listen to your ideas, offering personalized consultations to
+              tattoo as a lifelong commitment. That&apos;s why we take the time
+              to listen to your ideas, offering personalized consultations to
               ensure that your tattoo is not just a design but a reflection of
               your story, values, and aspirations.
             </p>
