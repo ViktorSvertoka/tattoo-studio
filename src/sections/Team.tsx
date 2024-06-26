@@ -28,13 +28,19 @@ const Team = () => {
             </p>
             <ul className="flex gap-[16px] mt-[16px]">
               <li>
-                <FaSquareFacebook className="h-[36px] w-[36px] text-gray transition duration-300 ease-out" />
+                <a href="#" className="cursor-pointer">
+                  <FaSquareFacebook className="h-[36px] w-[36px] text-gray hover:text-darkOrange transition duration-300 ease-out" />
+                </a>
               </li>
               <li>
-                <AiFillInstagram className="h-[40px] w-[40px] text-gray transition duration-300 ease-out" />
+                <a href="#" className="cursor-pointer">
+                  <AiFillInstagram className="h-[40px] w-[40px] text-gray hover:text-darkOrange transition duration-300 ease-out" />
+                </a>
               </li>
               <li>
-                <TbBrandYoutubeFilled className="h-[40px] w-[40px] text-gray transition duration-300 ease-out" />
+                <a href="#" className="cursor-pointer">
+                  <TbBrandYoutubeFilled className="h-[40px] w-[40px] text-gray hover:text-darkOrange transition duration-300 ease-out" />
+                </a>
               </li>
             </ul>
           </li>
@@ -55,13 +61,19 @@ const Team = () => {
             </p>
             <ul className="flex gap-[16px] mt-[16px]">
               <li>
-                <FaSquareFacebook className="h-[36px] w-[36px] text-gray transition duration-300 ease-out" />
+                <a href="#" className="cursor-pointer">
+                  <FaSquareFacebook className="h-[36px] w-[36px] text-gray hover:text-darkOrange transition duration-300 ease-out" />
+                </a>
               </li>
               <li>
-                <AiFillInstagram className="h-[40px] w-[40px] text-gray transition duration-300 ease-out" />
+                <a href="#" className="cursor-pointer">
+                  <AiFillInstagram className="h-[40px] w-[40px] text-gray hover:text-darkOrange transition duration-300 ease-out" />
+                </a>
               </li>
               <li>
-                <TbBrandYoutubeFilled className="h-[40px] w-[40px] text-gray transition duration-300 ease-out" />
+                <a href="#" className="cursor-pointer">
+                  <TbBrandYoutubeFilled className="h-[40px] w-[40px] text-gray hover:text-darkOrange transition duration-300 ease-out" />
+                </a>
               </li>
             </ul>
           </li>
@@ -82,13 +94,19 @@ const Team = () => {
             </p>
             <ul className="flex gap-[16px] mt-[16px]">
               <li>
-                <FaSquareFacebook className="h-[36px] w-[36px] text-gray transition duration-300 ease-out" />
+                <a href="#" className="cursor-pointer">
+                  <FaSquareFacebook className="h-[36px] w-[36px] text-gray hover:text-darkOrange transition duration-300 ease-out" />
+                </a>
               </li>
               <li>
-                <AiFillInstagram className="h-[40px] w-[40px] text-gray transition duration-300 ease-out" />
+                <a href="#" className="cursor-pointer">
+                  <AiFillInstagram className="h-[40px] w-[40px] text-gray hover:text-darkOrange transition duration-300 ease-out" />
+                </a>
               </li>
               <li>
-                <TbBrandYoutubeFilled className="h-[40px] w-[40px] text-gray transition duration-300 ease-out" />
+                <a href="#" className="cursor-pointer">
+                  <TbBrandYoutubeFilled className="h-[40px] w-[40px] text-gray hover:text-darkOrange transition duration-300 ease-out" />
+                </a>
               </li>
             </ul>
           </li>
