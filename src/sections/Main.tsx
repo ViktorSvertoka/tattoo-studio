@@ -3,6 +3,7 @@ import About from './About';
 import Services from './Services';
 import Team from './Team';
 import Choose from './Choose';
+import Contacts from './Contacts';
 
 const Main = () => {
   return (
@@ -12,6 +13,7 @@ const Main = () => {
       <Services />
       <Team />
       <Choose />
+      <Contacts />
     </>
   );
 };
