@@ -1,7 +1,7 @@
 const Contacts = () => {
   return (
     <section className="">
-      <div className="container">
+      <div className="container flex ">
         <div>
           <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mt-[24px] sm:mt-[40px] lg:mt-[74px] xs:mb-[32px] sm:mb-[40px] lg:mb-[73px] xs:text-center sm:text-center lg:text-center">
             Online-booking
@@ -37,10 +37,30 @@ const Contacts = () => {
             </button>
           </form>
         </div>
-        <div>
+        <div className="xs:bg-contactsMobile sm:bg-contactsTablet lg:bg-contactsDesktop bg-cover bg-center">
           <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mt-[24px] sm:mt-[40px] lg:mt-[74px] xs:mb-[32px] sm:mb-[40px] lg:mb-[73px] xs:text-center sm:text-center lg:text-center">
             Contacts
           </h2>
+          <ul>
+            <li>
+              <p>Good Luck Tattoo Studio</p>
+            </li>
+            <li>
+              <p>Miramar Beach</p>
+            </li>
+            <li>
+              <p>​good-luck.tattoo@gmail.com</p>
+            </li>
+            <li>
+              <p>​850-424-6584</p>
+            </li>
+            <li>
+              <p>​Tattoo Shop Hours:</p>
+            </li>
+            <li>
+              <p>Sunday - Saturday 1pm - 9pm​</p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

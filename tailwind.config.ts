@@ -13,6 +13,10 @@ const config: Config = {
         heroDesktop: `url(/images/hero-desktop-2x.png)`,
         heroTablet: `url(/images/hero-tablet-2x.png)`,
         heroMobile: `url(/images/hero-mobile-2x.png)`,
+
+        contactsDesktop: `url(/images/contacts-desktop-2x.png)`,
+        contactsTablet: `url(/images/contacts-tablet-2x.png)`,
+        contactsMobile: `url(/images/contacts-mobile-2x.png)`,
       }),
       screens: {
         xs: '375px',
