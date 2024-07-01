@@ -5,10 +5,12 @@ import { TbBrandYoutubeFilled } from 'react-icons/tb';
 
 const Footer = () => {
   return (
-    <section className="">
-      <div className="container">
-        <p>© All rights reserved 2023</p>
-        <ul className="">
+    <section className="pt-[30px] pb-[30px]">
+      <div className="container flex justify-between">
+        <p className="text-gray font-playfair text-[20px]">
+          © All rights reserved 2023
+        </p>
+        <ul className="flex gap-[30px]">
           <li>
             <a href="#" className="cursor-pointer">
               <FaSquareFacebook className="h-[56px] w-[56px] text-gray hover:text-darkOrange transition duration-300 ease-out" />
