@@ -4,6 +4,7 @@ import Services from './Services';
 import Team from './Team';
 import Choose from './Choose';
 import Contacts from './Contacts';
+import Footer from './Footer';
 
 const Main = () => {
   return (
@@ -14,6 +15,7 @@ const Main = () => {
       <Team />
       <Choose />
       <Contacts />
+      <Footer />
     </>
   );
 };
