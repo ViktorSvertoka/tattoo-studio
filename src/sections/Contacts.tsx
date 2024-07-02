@@ -31,7 +31,7 @@ const Contacts = () => {
             ></textarea>
             <button
               type="submit"
-              className="text-black hover:text-[darkOrange] bg-[darkOrange] hover:bg-transparent border-transparent border-2 hover:border-2 border-[black] hover:border-[darkOrange] text-[24px] xs:w-[343px] sm:w-[220px] lg:w-[220px] rounded-[50px] py-4 flex items-center justify-center mt-[45px] ml-auto mr-auto"
+              className="hover:text-black text-darkOrange hover:bg-darkOrange bg-transparent focus:border-transparent border-2 hover:border-2 hover:border-darkOrange border-darkOrange text-[24px] xs:w-[343px] sm:w-[220px] lg:w-[220px] rounded-[50px] py-4 flex items-center justify-center mt-[45px] ml-auto mr-auto"
             >
               Send
             </button>
