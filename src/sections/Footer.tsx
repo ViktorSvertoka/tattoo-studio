@@ -6,7 +6,7 @@ import { TbBrandYoutubeFilled } from 'react-icons/tb';
 const Footer = () => {
   return (
     <section className="pt-[30px] pb-[30px]">
-      <div className="container flex justify-between">
+      <div className="container flex justify-between items-center">
         <p className="text-gray font-playfair text-[20px]">
           © All rights reserved 2023
         </p>
