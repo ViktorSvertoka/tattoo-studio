@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { FaSquareFacebook } from 'react-icons/fa6';
 import { AiFillInstagram } from 'react-icons/ai';
 import { TbBrandYoutubeFilled } from 'react-icons/tb';
