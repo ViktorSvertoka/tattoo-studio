@@ -8,7 +8,7 @@ const Services = () => {
           What we do
         </h2>
         <div className="">
-          <ul className="flex justify-center gap-[24px] xs:flex-col sm:flex-wrap lg:flex-row">
+          <ul className="flex justify-center gap-[24px] xs:flex-col sm:flex-row lg:flex-row sm:flex-wrap">
             <li className="flex flex-col items-center text-center gap-[30px] py-[30px] w-[302px]">
               <Image
                 className=""
