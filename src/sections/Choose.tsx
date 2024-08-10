@@ -5,7 +5,7 @@ const Choose = () => {
         <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mt-[24px] sm:mt-[40px] lg:mt-[74px] xs:mb-[32px] sm:mb-[40px] lg:mb-[73px] xs:text-center sm:text-center lg:text-center">
           Why choose us
         </h2>
-        <ul className="flex justify-center xs:flex-col sm:flex-wrap lg:flex-row gap-[24px]">
+        <ul className="flex justify-center xs:flex-col sm:flex-row lg:flex-row gap-[24px]">
           <li className="flex flex-col items-center text-center gap-[30px] py-[30px] w-[302px]">
             <h4 className="text-darkOrange font-orelega text-[40px]">15K</h4>
             <p className="text-gray font-playfair text-[16px]">Tattoo done</p>
