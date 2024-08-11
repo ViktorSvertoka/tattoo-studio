@@ -1,7 +1,7 @@
 const Contacts = () => {
   return (
     <section className="mt-[134px]">
-      <div className="container flex xs:flex-col sm:flex-col lg:flex-row lg:justify-between pl-[140px]">
+      <div className="lg:container flex xs:flex-col sm:flex-col lg:flex-row lg:justify-between lg:pl-[140px]">
         <div className="">
           <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mt-[24px] sm:mt-[40px] lg:mt-[100px] xs:mb-[32px] sm:mb-[40px] lg:mb-[30px] xs:text-center sm:text-center lg:text-center">
             Online-booking
@@ -40,7 +40,7 @@ const Contacts = () => {
             </button>
           </form>
         </div>
-        <div className="xs:bg-contactsMobile sm:bg-contactsTablet lg:bg-contactsDesktop bg-cover bg-center w-[708px] h-[633px] pt-[100px] pl-[110px]">
+        <div className="xs:bg-contactsMobile sm:bg-contactsTablet lg:bg-contactsDesktop bg-cover bg-center sm:w-[834px] sm:h-[449px] lg:w-[708px] lg:h-[633px] sm:pt-[60px] sm:pl-[100px] lg:pt-[100px] lg:pl-[110px]">
           <div>
             <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] mb-[40px]">
               Contacts
