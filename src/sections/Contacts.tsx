@@ -6,7 +6,10 @@ const Contacts = () => {
           <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mt-[24px] sm:mt-[40px] lg:mt-[100px] xs:mb-[32px] sm:mb-[40px] lg:mb-[30px] xs:text-center sm:text-center lg:text-center">
             Online-booking
           </h2>
-          <form action="" className="flex flex-col w-[458px]">
+          <form
+            action=""
+            className="flex flex-col w-[458px] sm:m-auto sm:mb-[60px]"
+          >
             <label htmlFor="" className="text-gray font-playfair text-[16px]">
               Name
             </label>
