@@ -40,7 +40,7 @@ const Contacts = () => {
             </button>
           </form>
         </div>
-        <div className="xs:bg-contactsMobile sm:bg-contactsTablet lg:bg-contactsDesktop bg-cover bg-center sm:w-[834px] sm:h-[449px] lg:w-[708px] lg:h-[633px] sm:pt-[60px] sm:pl-[100px] lg:pt-[100px] lg:pl-[110px]">
+        <div className="xs:bg-contactsMobile sm:bg-contactsTablet lg:bg-contactsDesktop bg-cover bg-center xs:w-[375px] xs:h-[660px] sm:w-[834px] sm:h-[449px] lg:w-[708px] lg:h-[633px] sm:pt-[60px] sm:pl-[100px] lg:pt-[100px] lg:pl-[110px]">
           <div>
             <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] mb-[40px]">
               Contacts
