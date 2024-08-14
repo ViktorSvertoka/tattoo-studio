@@ -7,7 +7,7 @@ const Footer = () => {
     <section className="pt-[30px] pb-[30px]">
       <div className="container flex justify-between items-center">
         <p className="text-gray font-playfair text-[20px]">
-          © All rights reserved 2023
+          © All rights reserved 2024
         </p>
         <ul className="flex gap-[30px]">
           <li>
