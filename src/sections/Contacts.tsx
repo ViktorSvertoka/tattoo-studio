@@ -2,13 +2,13 @@ const Contacts = () => {
   return (
     <section className="mt-[134px]">
       <div className="lg:container flex xs:flex-col sm:flex-col lg:flex-row lg:justify-between lg:pl-[140px]">
-        <div className="">
+        <div className="flex flex-col items-center">
           <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mt-[24px] sm:mt-[40px] lg:mt-[100px] xs:mb-[32px] sm:mb-[40px] lg:mb-[30px] xs:text-center sm:text-center lg:text-center">
             Online-booking
           </h2>
           <form
             action=""
-            className="flex flex-col w-[458px] sm:m-auto sm:mb-[60px]"
+            className="flex flex-col xs:w-[343px] sm:w-[458px] lg:w-[458px] sm:m-auto sm:mb-[60px]"
           >
             <label htmlFor="" className="text-gray font-playfair text-[16px]">
               Name
@@ -34,7 +34,7 @@ const Contacts = () => {
             ></textarea>
             <button
               type="submit"
-              className="hover:text-black text-darkOrange hover:bg-darkOrange bg-transparent focus:border-transparent border-2 hover:border-2 hover:border-darkOrange border-darkOrange text-[24px] xs:w-[343px] sm:w-[220px] lg:w-[220px] rounded-[50px] py-4 flex items-center justify-center mt-[45px] ml-auto mr-auto"
+              className="hover:text-black text-darkOrange hover:bg-darkOrange bg-transparent focus:border-transparent border-2 hover:border-2 hover:border-darkOrange border-darkOrange text-[24px] xs:w-[343px] sm:w-[220px] lg:w-[220px] rounded-[50px] py-4 flex items-center justify-center mt-[45px] ml-auto mr-auto xs:mb-[32px]"
             >
               Send
             </button>
