@@ -16,7 +16,6 @@ const Team = () => {
               className=""
               src="/images/team-01.png"
               alt="Services logo"
-              layout="intrinsic"
               width={326}
               height={346}
             />
@@ -49,7 +48,6 @@ const Team = () => {
               className=""
               src="/images/team-02.png"
               alt="Services logo"
-              layout="intrinsic"
               width={326}
               height={346}
             />
@@ -82,7 +80,6 @@ const Team = () => {
               className=""
               src="/images/team-03.png"
               alt="Services logo"
-              layout="intrinsic"
               width={326}
               height={346}
             />
