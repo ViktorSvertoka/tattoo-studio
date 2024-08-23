@@ -14,7 +14,6 @@ const Services = () => {
                 className=""
                 src="/images/services-01.png"
                 alt="Services logo"
-                layout="intrinsic"
                 width={40}
                 height={40}
               />
@@ -32,7 +31,6 @@ const Services = () => {
                 className=""
                 src="/images/services-02.png"
                 alt="Services logo"
-                layout="intrinsic"
                 width={40}
                 height={40}
               />
@@ -49,7 +47,6 @@ const Services = () => {
                 className=""
                 src="/images/services-03.png"
                 alt="Services logo"
-                layout="intrinsic"
                 width={40}
                 height={40}
               />
@@ -67,7 +64,6 @@ const Services = () => {
                 className=""
                 src="/images/services-04.png"
                 alt="Services logo"
-                layout="intrinsic"
                 width={40}
                 height={40}
               />
