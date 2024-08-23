@@ -13,7 +13,6 @@ const About = () => {
               className="block sm:hidden"
               src="/images/about-mobile-2x.png"
               alt="About Image"
-              layout="intrinsic"
               width={343}
               height={232}
             />
@@ -21,7 +20,6 @@ const About = () => {
               className="hidden sm:block lg:hidden"
               src="/images/about-tablet-2x.png"
               alt="About Image"
-              layout="intrinsic"
               width={770}
               height={500}
             />
@@ -29,7 +27,6 @@ const About = () => {
               className="hidden lg:block"
               src="/images/about-desktop-2x.png"
               alt="About Image"
-              layout="intrinsic"
               width={628}
               height={494}
             />
