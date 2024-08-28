@@ -1,6 +1,24 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+import { IconType } from 'react-icons';
 
-const TeamMemberCard = ({ image, name, role, socialLinks }) => {
+interface SocialLink {
+  href: string;
+  icon: IconType;
+}
+
+interface TeamMemberCardProps {
+  image: StaticImageData;
+  name: string;
+  role: string;
+  socialLinks: SocialLink[];
+}
+
+const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
+  image,
+  name,
+  role,
+  socialLinks,
+}) => {
   return (
     <li className="flex flex-col items-center text-center py-[30px] w-[302px]">
       <Image src={image} alt={`${name} image`} width={326} height={346} />
