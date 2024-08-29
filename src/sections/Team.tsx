@@ -1,5 +1,5 @@
-import TeamMemberCard from '../components/TeamMemberCard';
-import { teamMembers } from '../data/teamMembers';
+import TeamMemberCard from '../components/TeamCard';
+import { teamMembers } from '../data/dataTeam';
 
 const Team = () => {
   return (
