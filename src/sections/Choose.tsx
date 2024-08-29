@@ -1,3 +1,10 @@
+const dataChoose = [
+  { id: 1, number: '15K', text: 'Tattoo done' },
+  { id: 2, number: '4K', text: 'Satisfied customers' },
+  { id: 3, number: '17+', text: 'Award winning' },
+  { id: 4, number: '1.2K', text: 'Piercing done' },
+];
+
 const Choose = () => {
   return (
     <section className="">
@@ -6,24 +13,17 @@ const Choose = () => {
           Why choose us
         </h2>
         <ul className="flex justify-center xs:flex-col sm:flex-row lg:flex-row gap-[24px]">
-          <li className="flex flex-col items-center text-center gap-[30px] py-[30px] w-[302px]">
-            <h4 className="text-darkOrange font-orelega text-[40px]">15K</h4>
-            <p className="text-gray font-playfair text-[16px]">Tattoo done</p>
-          </li>
-          <li className="flex flex-col items-center text-center gap-[30px] py-[30px] w-[302px]">
-            <h4 className="text-darkOrange font-orelega text-[40px]">4K</h4>
-            <p className="text-gray font-playfair text-[16px]">
-              Satisfied customers
-            </p>
-          </li>
-          <li className="flex flex-col items-center text-center gap-[30px] py-[30px] w-[302px]">
-            <h4 className="text-darkOrange font-orelega text-[40px]">17+</h4>
-            <p className="text-gray font-playfair text-[16px]">Award winning</p>
-          </li>
-          <li className="flex flex-col items-center text-center gap-[30px] py-[30px] w-[302px]">
-            <h4 className="text-darkOrange font-orelega text-[40px]">1.2K</h4>
-            <p className="text-gray font-playfair text-[16px]">Piercing done</p>
-          </li>
+          {dataChoose.map(({ id, number, text }) => (
+            <li
+              key={id}
+              className="flex flex-col items-center text-center gap-[30px] py-[30px] w-[302px]"
+            >
+              <h4 className="text-darkOrange font-orelega text-[40px]">
+                {number}
+              </h4>
+              <p className="text-gray font-playfair text-[16px]">{text}</p>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
