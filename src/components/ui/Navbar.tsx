@@ -1,9 +1,11 @@
+import Link from 'next/link';
+
 const navLinks = [
-  { id: 1, href: '#', label: 'Home' },
-  { id: 2, href: '#', label: 'Gallery' },
-  { id: 3, href: '#', label: 'About' },
-  { id: 4, href: '#', label: 'Artists' },
-  { id: 5, href: '#', label: 'Contacts' },
+  { id: 1, href: '/', label: 'Home' },
+  { id: 2, href: '/gallery', label: 'Gallery' },
+  { id: 3, href: '/about', label: 'About' },
+  { id: 4, href: '/artists', label: 'Artists' },
+  { id: 5, href: '/contacts', label: 'Contacts' },
 ];
 
 const Navbar = () => {
@@ -11,13 +13,13 @@ const Navbar = () => {
     <nav className="xs:hidden sm:block lg:block">
       <div className="flex sm:gap-[32px] lg:gap-[38px] lg:pt-[19px] lg:pb-5">
         {navLinks.map(({ id, href, label }) => (
-          <a
+          <Link
             key={id}
             href={href}
             className="text-white font-playfair lg:text-[20px] font-medium leading-[30px] hover:text-[darkOrange]"
           >
             {label}
-          </a>
+          </Link>
         ))}
       </div>
     </nav>
