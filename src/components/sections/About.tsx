@@ -1,5 +1,5 @@
-import ImageComponent from '../components/AboutImage';
-import TextComponent from '../components/TextComponent';
+import ImageComponent from '../ui/AboutImage';
+import TextComponent from '../ui/TextComponent';
 
 const About = () => {
   return (

@@ -1,5 +1,5 @@
-import ServiceCard from '../components/ServiceCard';
-import { dataServices } from '../data/dataServices';
+import ServiceCard from '../ui/ServiceCard';
+import { dataServices } from '../../data/dataServices';
 
 const Services = () => {
   return (

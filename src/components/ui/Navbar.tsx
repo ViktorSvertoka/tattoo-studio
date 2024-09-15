@@ -1,8 +1,8 @@
 const navLinks = [
-  { id: 1, href: '#', label: 'About' },
-  { id: 2, href: '#', label: 'Artists' },
-  { id: 3, href: '#', label: 'Gallery' },
-  { id: 4, href: '#', label: 'Prices' },
+  { id: 1, href: '#', label: 'Home' },
+  { id: 2, href: '#', label: 'Gallery' },
+  { id: 3, href: '#', label: 'About' },
+  { id: 4, href: '#', label: 'Artists' },
   { id: 5, href: '#', label: 'Contacts' },
 ];
 

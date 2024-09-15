@@ -1,6 +1,6 @@
-import Navbar from '../components/Navbar';
-import Logo from '../../public/icons/logo.svg';
-import Menu from '../../public/icons/mobile-menu.svg';
+import Navbar from '../ui/Navbar';
+import Logo from '../../../public/icons/logo.svg';
+import Menu from '../../../public/icons/mobile-menu.svg';
 
 const Hero = () => {
   return (
