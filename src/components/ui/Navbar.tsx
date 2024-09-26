@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 const navLinks = [
   { id: 1, href: '/', label: 'Home' },
-  { id: 2, href: '/gallery', label: 'Gallery' },
-  { id: 3, href: '/about', label: 'About' },
-  { id: 4, href: '/artists', label: 'Artists' },
-  { id: 5, href: '/contacts', label: 'Contacts' },
+  { id: 2, href: '/about', label: 'About' },
+  { id: 3, href: '/artists', label: 'Artists' },
+  { id: 4, href: '/contacts', label: 'Contacts' },
+  { id: 5, href: '/gallery', label: 'Gallery' },
 ];
 
 const Navbar = () => {
