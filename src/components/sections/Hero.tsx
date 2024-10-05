@@ -1,8 +1,12 @@
+'use client';
+import { useState } from 'react';
 import Navbar from '../ui/Navbar';
 import Logo from '../../../public/icons/logo.svg';
 import Menu from '../../../public/icons/mobile-menu.svg';
+import Modal from '../ui/Modal';
 
 const Hero = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <section className="w-full h-full flex flex-col bg-heroMobile sm:bg-heroTablet lg:bg-heroDesktop bg-cover bg-center">
       <div className="container">
@@ -24,10 +28,12 @@ const Hero = () => {
         </p>
         <button
           type="button"
+          onClick={() => setIsOpen(true)}
           className="hover:text-black text-darkOrange hover:bg-darkOrange bg-transparent focus:border-transparent border-2 hover:border-2 hover:border-darkOrange border-darkOrange text-[24px] xs:w-[343px] sm:w-[300px] lg:w-[300px] rounded-[50px] py-4 flex items-center justify-center xs:mb-[26px] sm:mb-[150px] lg:mb-[267px] mt-[63px]"
         >
           Online-booking
         </button>
+        {isOpen && <Modal setIsOpen={setIsOpen} />}
       </div>
     </section>
   );
