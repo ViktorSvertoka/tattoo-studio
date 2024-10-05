@@ -1,6 +1,10 @@
 import { RiCloseLine } from 'react-icons/ri';
 
-const Modal = ({ setIsOpen }) => {
+interface ModalProps {
+  setIsOpen: (isOpen: boolean) => void;
+}
+
+const Modal: React.FC<ModalProps> = ({ setIsOpen }) => {
   return (
     <div className="darkBG" onClick={() => setIsOpen(false)}>
       <div className="centered">
@@ -46,7 +50,7 @@ const Modal = ({ setIsOpen }) => {
                 className="text-gray rounded-[4px] border border-darkOrange bg-transparent outline-none focus:border-white h-[110px] pl-[10px]"
               ></textarea>
               <p className="text-gray mt-[13px]">
-                Givin your information you agree with privacy policy.
+                Giving your information you agree with privacy policy.
               </p>
               <button
                 type="submit"
