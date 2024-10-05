@@ -33,7 +33,7 @@ const Hero = () => {
         >
           Online-booking
         </button>
-        {isOpen && <Modal setIsOpen={setIsOpen} />}
+        {isOpen && <Modal isOpen={isOpen} setIsOpen={setIsOpen} />}
       </div>
     </section>
   );

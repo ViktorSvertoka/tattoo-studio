@@ -1,12 +1,40 @@
 import { RiCloseLine } from 'react-icons/ri';
+import { useEffect } from 'react';
 
 interface ModalProps {
+  isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ setIsOpen }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
+  const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (event.target === event.currentTarget) {
+      setIsOpen(false);
+    }
+  };
+
+  const handleEscape = (event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleEscape);
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+      window.removeEventListener('keydown', handleEscape);
+    };
+  }, [isOpen]);
+
+  if (!isOpen) return null;
+
   return (
-    <div className="darkBG" onClick={() => setIsOpen(false)}>
+    <div className="darkBG" onClick={handleBackdropClick}>
       <div className="centered">
         <div className="bg-black rounded-[25px] lg:w-[780px] lg:h-[800px]">
           <button className="closeBtn" onClick={() => setIsOpen(false)}>
