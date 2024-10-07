@@ -34,11 +34,17 @@ const Modal: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="darkBG" onClick={handleBackdropClick}>
-      <div className="centered">
+    <div
+      className="bg-black/20 w-screen h-screen z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute"
+      onClick={handleBackdropClick}
+    >
+      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <div className="bg-black rounded-[25px] lg:w-[780px] lg:h-[800px]">
-          <button className="closeBtn" onClick={() => setIsOpen(false)}>
-            <RiCloseLine className="text-white" />
+          <button
+            className="cursor-pointer py-[16px] px-[16px] absolute right-0 top-0"
+            onClick={() => setIsOpen(false)}
+          >
+            <RiCloseLine className="text-white w-[40px] h-[40px]" />
           </button>
           <div className="p-[50px]">
             <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:text-center sm:text-center lg:text-center">
