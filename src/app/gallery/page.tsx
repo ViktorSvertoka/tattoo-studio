@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import GridList from '@/components/ui/GridList';
 
 export default function Gallery() {
   return (
@@ -12,6 +13,7 @@ export default function Gallery() {
             Gallery
           </h2>
         </div>
+        <GridList />
       </div>
     </section>
   );
