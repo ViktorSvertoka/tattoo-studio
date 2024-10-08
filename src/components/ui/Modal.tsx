@@ -39,48 +39,59 @@ const Modal: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
       onClick={handleBackdropClick}
     >
       <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="bg-black rounded-[25px] lg:w-[780px] lg:h-[800px]">
+        <div className="bg-black rounded-[25px] lg:w-[680px] lg:h-[750px]">
           <button
             className="cursor-pointer py-[16px] px-[16px] absolute right-0 top-0"
             onClick={() => setIsOpen(false)}
           >
-            <RiCloseLine className="text-white w-[40px] h-[40px]" />
+            <RiCloseLine className="text-white hover:text-darkOrange w-[40px] h-[40px]" />
           </button>
           <div className="p-[50px]">
             <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:text-center sm:text-center lg:text-center">
               Online-booking
             </h2>
-            <form
-              action=""
-              className="flex flex-col xs:w-[343px] sm:w-[458px] lg:w-[458px] sm:m-auto sm:mb-[60px]"
-            >
-              <label htmlFor="" className="text-gray font-playfair text-[16px]">
+            <form className="flex flex-col xs:w-[343px] sm:w-[458px] lg:w-[458px] sm:m-auto sm:mb-[60px]">
+              <label
+                htmlFor="name"
+                className="text-gray font-playfair text-[16px]"
+              >
                 Name
               </label>
               <input
+                id="name"
                 type="text"
                 className="text-gray rounded-[4px] border border-darkOrange bg-transparent outline-none focus:border-white h-[50px] mb-[16px] pl-[10px]"
               />
-              <label htmlFor="" className="text-gray font-playfair text-[16px]">
+              <label
+                htmlFor="email"
+                className="text-gray font-playfair text-[16px]"
+              >
                 Email
               </label>
               <input
-                type="text"
+                id="email"
+                type="email"
                 className="text-gray rounded-[4px] border border-darkOrange bg-transparent outline-none focus:border-white h-[50px] mb-[16px] pl-[10px]"
               />
-              <label htmlFor="" className="text-gray font-playfair text-[16px]">
+              <label
+                htmlFor="phone"
+                className="text-gray font-playfair text-[16px]"
+              >
                 Phone
               </label>
               <input
-                type="text"
+                id="phone"
+                type="tel"
                 className="text-gray rounded-[4px] border border-darkOrange bg-transparent outline-none focus:border-white h-[50px] mb-[16px] pl-[10px]"
               />
-              <label htmlFor="" className="text-gray font-playfair text-[16px]">
+              <label
+                htmlFor="message"
+                className="text-gray font-playfair text-[16px]"
+              >
                 Message
               </label>
               <textarea
-                name=""
-                id=""
+                id="message"
                 className="text-gray rounded-[4px] border border-darkOrange bg-transparent outline-none focus:border-white h-[110px] pl-[10px]"
               ></textarea>
               <p className="text-gray mt-[13px]">
