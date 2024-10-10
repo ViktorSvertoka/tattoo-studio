@@ -1,8 +1,8 @@
 const Contacts = () => {
   return (
     <section className="mt-[134px]">
-      <div className="container relative lg:items-center flex xs:flex-col sm:flex-col lg:flex-row lg:justify-between">
-        <div className="flex flex-col items-center lg:ml-[100px]">
+      <div className="container lg:items-center flex xs:flex-col sm:flex-col lg:flex-row lg:justify-between">
+        <div className="flex flex-col items-center">
           <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mt-[24px] sm:mt-[40px] lg:mt-[100px] xs:mb-[32px] sm:mb-[40px] lg:mb-[30px] xs:text-center sm:text-center lg:text-center">
             Online-booking
           </h2>
@@ -40,7 +40,7 @@ const Contacts = () => {
             </button>
           </form>
         </div>
-        <div className="lg:absolute lg:top-0 lg:right-0 xs:bg-contactsMobile sm:bg-contactsTablet lg:bg-contactsDesktop bg-cover bg-center xs:w-[375px] xs:h-[660px] sm:w-[834px] sm:h-[449px] lg:w-[708px] lg:h-[633px] sm:pt-[30px] sm:pl-[60px] lg:pt-[100px] lg:pl-[110px]">
+        <div className="xs:bg-contactsMobile sm:bg-contactsTablet lg:bg-contactsDesktop bg-cover bg-center xs:w-[375px] xs:h-[660px] sm:w-[834px] sm:h-[449px] lg:w-[708px] lg:h-[633px] sm:pt-[30px] sm:pl-[60px] lg:pt-[100px] lg:pl-[110px]">
           <div className="xs:pt-[300px] xs:pl-[80px] sm:pt-[0px] sm:pl-[0px]">
             <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mb-[15px] sm:mb-[25px] lg:mb-[40px]">
               Contacts
