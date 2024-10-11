@@ -77,3 +77,23 @@ h6 {
     margin: 0 auto;
   }
 }
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  width: 302px !important;
+  margin-right: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  background: #ff6c00 !important;
+  width: 12px !important;
+  height: 12px !important;
+}

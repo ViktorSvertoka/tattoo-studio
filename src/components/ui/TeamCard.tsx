@@ -20,8 +20,8 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   socialLinks,
 }) => {
   return (
-    <li className="flex flex-col items-center text-center py-[30px] w-[302px]">
-      <Image src={image} alt={`${name} image`} width={326} height={346} />
+    <div className="flex flex-col items-center text-center py-[30px] w-[302px]">
+      <Image src={image} alt={`${name} image`} />
       <h4 className="text-darkOrange font-rye text-[24px] mt-[30px]">{name}</h4>
       <p className="text-white font-playfair text-[20px]">{role}</p>
       <ul className="flex gap-[16px] mt-[16px]">
@@ -33,7 +33,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
           </li>
         ))}
       </ul>
-    </li>
+    </div>
   );
 };
 
