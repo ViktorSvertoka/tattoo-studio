@@ -10,6 +10,7 @@ interface TeamMemberCardProps {
   image: StaticImageData;
   name: string;
   role: string;
+  alt: string;
   socialLinks: SocialLink[];
 }
 
@@ -17,11 +18,12 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
   image,
   name,
   role,
+  alt,
   socialLinks,
 }) => {
   return (
     <div className="flex flex-col items-center text-center py-[30px] w-[302px]">
-      <Image src={image} alt={`${name} image`} />
+      <Image src={image} alt={alt} />
       <h4 className="text-darkOrange font-rye text-[24px] mt-[30px]">{name}</h4>
       <p className="text-white font-playfair text-[20px]">{role}</p>
       <ul className="flex gap-[16px] mt-[16px]">

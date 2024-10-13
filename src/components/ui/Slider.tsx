@@ -30,14 +30,14 @@ export default function Slider() {
       }}
       modules={[Pagination]}
     >
-      {teamMembers.map(({ id, imageSrc, role, name, socialLinks }) => (
-        <SwiperSlide key={id}>
+      {teamMembers.map(({ src, alt, role, name, icon }, index) => (
+        <SwiperSlide key={index}>
           <TeamMemberCard
-            key={id}
-            image={imageSrc}
+            alt={alt}
+            image={src}
             name={name}
             role={role}
-            socialLinks={socialLinks}
+            socialLinks={icon}
           />
         </SwiperSlide>
       ))}

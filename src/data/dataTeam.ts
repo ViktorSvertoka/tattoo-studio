@@ -15,24 +15,24 @@ const commonRole = 'Tattoo artist';
 
 export const teamMembers = [
   {
-    id: 1,
     name: 'John Smith',
     role: commonRole,
-    imageSrc: imageMember1,
-    socialLinks: commonSocialLinks,
+    src: imageMember1,
+    alt: 'Tattoo master',
+    icon: commonSocialLinks,
   },
   {
-    id: 2,
     name: 'Michele Doe',
     role: commonRole,
-    imageSrc: imageMember2,
-    socialLinks: commonSocialLinks,
+    src: imageMember2,
+    alt: 'Tattoo master',
+    icon: commonSocialLinks,
   },
   {
-    id: 3,
     name: 'Alan Black',
     role: commonRole,
-    imageSrc: imageMember3,
-    socialLinks: commonSocialLinks,
+    src: imageMember3,
+    alt: 'Tattoo master',
+    icon: commonSocialLinks,
   },
 ];
