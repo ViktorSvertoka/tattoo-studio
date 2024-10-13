@@ -1,38 +1,41 @@
-import imageMember1 from '../../public/images/team-01.png';
-import imageMember2 from '../../public/images/team-02.png';
-import imageMember3 from '../../public/images/team-03.png';
-import { FaSquareFacebook } from 'react-icons/fa6';
-import { AiFillInstagram } from 'react-icons/ai';
-import { TbBrandYoutubeFilled } from 'react-icons/tb';
+import image1 from '../../public/images/girl-01.jpg';
+import image2 from '../../public/images/girl-02.jpg';
+import image3 from '../../public/images/girl-03.jpg';
+import image4 from '../../public/images/girl-04.jpg';
+import image5 from '../../public/images/girl-05.jpg';
+import image6 from '../../public/images/girl-06.jpg';
 
-const commonSocialLinks = [
-  { href: '#', icon: FaSquareFacebook },
-  { href: '#', icon: AiFillInstagram },
-  { href: '#', icon: TbBrandYoutubeFilled },
-];
-
-const commonRole = 'Tattoo artist';
+const text = 'Tattoo master';
 
 export const teamMembers = [
   {
-    name: 'John Smith',
-    role: commonRole,
-    src: imageMember1,
-    alt: 'Tattoo master',
-    icon: commonSocialLinks,
+    name: 'Michele',
+    src: image1,
+    alt: text,
   },
   {
-    name: 'Michele Doe',
-    role: commonRole,
-    src: imageMember2,
-    alt: 'Tattoo master',
-    icon: commonSocialLinks,
+    name: 'Bella',
+    src: image2,
+    alt: text,
   },
   {
-    name: 'Alan Black',
-    role: commonRole,
-    src: imageMember3,
-    alt: 'Tattoo master',
-    icon: commonSocialLinks,
+    name: 'Emma',
+    src: image3,
+    alt: text,
+  },
+  {
+    name: 'Alice',
+    src: image4,
+    alt: text,
+  },
+  {
+    name: 'Jessica',
+    src: image5,
+    alt: text,
+  },
+  {
+    name: 'Lily',
+    src: image6,
+    alt: text,
   },
 ];

@@ -79,17 +79,23 @@ h6 {
 }
 
 .swiper-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
+  height: 420px !important;
 }
 
 .swiper-slide {
-  width: 302px !important;
-  margin-right: 0 !important;
+  text-align: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.shadow-card {
+  box-shadow: 0 4px 15px 0 rgba(70, 31, 12, 0.4);
 }
 
 .swiper-pagination-bullet {

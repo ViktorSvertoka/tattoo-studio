@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import GridList from '@/components/ui/GridList';
+import GridList from '../../components/ui/GridList';
 
 export default function Gallery() {
   return (
