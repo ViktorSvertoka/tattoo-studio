@@ -7,19 +7,19 @@ const footerLinks = [
     id: 1,
     href: '#',
     icon: FaSquareFacebook,
-    size: { height: 56, width: 56 },
+    size: { height: 36, width: 36 },
   },
   {
     id: 2,
     href: '#',
     icon: AiFillInstagram,
-    size: { height: 60, width: 60 },
+    size: { height: 40, width: 40 },
   },
   {
     id: 3,
     href: '#',
     icon: TbBrandYoutubeFilled,
-    size: { height: 60, width: 60 },
+    size: { height: 40, width: 40 },
   },
 ];
 
@@ -32,7 +32,7 @@ const Footer = () => {
         <p className="text-gray font-playfair text-[20px] xs:order-2 sm:order-1 lg:order-1 xs:pt-[16px] sm:pt-[0px] lg:pt-[0px]">
           © All rights reserved {currentYear}
         </p>
-        <ul className="flex gap-[30px] xs:order-1 sm:order-2 lg:order-2">
+        <ul className="flex gap-[20px] xs:order-1 sm:order-2 lg:order-2">
           {footerLinks.map(({ id, href, icon: Icon, size }) => (
             <li key={id}>
               <a href={href} className="cursor-pointer">
