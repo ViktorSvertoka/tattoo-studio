@@ -1,3 +1,4 @@
+// tailwind.config.js
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -6,18 +7,18 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/sections/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/data/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-      backgroundImage: () => ({
+      backgroundImage: {
         heroDesktop: `url(/images/hero-desktop-2x.png)`,
         heroTablet: `url(/images/hero-tablet-2x.png)`,
         heroMobile: `url(/images/hero-mobile-2x.png)`,
-
         contactsDesktop: `url(/images/contacts-desktop-2x.png)`,
         contactsTablet: `url(/images/contacts-tablet-2x.png)`,
         contactsMobile: `url(/images/contacts-mobile-2x.png)`,
-      }),
+      },
       screens: {
         xs: '375px',
         sm: '834px',
