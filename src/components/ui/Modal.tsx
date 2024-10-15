@@ -39,7 +39,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
       onClick={handleBackdropClick}
     >
       <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="bg-black rounded-[25px] xs:w-[343px] xs:h-[680px] sm:w-[506px] sm:h-[740px] lg:w-[680px] lg:h-[750px]">
+        <div className="bg-black rounded-[25px] xs:w-[343px] xs:h-[680px] sm:w-[506px] sm:h-[740px] lg:w-[680px] lg:h-[750px] border-2 border-[darkOrange]">
           <button
             className="cursor-pointer py-[16px] px-[16px] absolute right-0 top-0"
             onClick={() => setIsOpen(false)}
