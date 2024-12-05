@@ -1,6 +1,12 @@
 import Image from 'next/image';
 import NotFoundImage from '../../public/images/404.png';
 
+export const generateMetadata = () => {
+  return {
+    title: 'Page 404',
+  };
+};
+
 const NotFound = () => {
   return (
     <>

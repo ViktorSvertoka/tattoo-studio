@@ -1,5 +1,11 @@
 import Link from 'next/link';
 
+export const generateMetadata = () => {
+  return {
+    title: 'Blog',
+  };
+};
+
 export default function Blog() {
   return (
     <section className="">

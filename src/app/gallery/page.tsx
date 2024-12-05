@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import GridList from '../../components/ui/GridList';
 
+export const generateMetadata = () => {
+  return {
+    title: 'Gallery',
+  };
+};
+
 export default function Gallery() {
   return (
     <section className="">
