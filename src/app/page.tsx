@@ -19,7 +19,6 @@ export default function Home() {
       <Choose />
       <Contacts />
       <Footer />
-      <ContactForm />
     </>
   );
 }
