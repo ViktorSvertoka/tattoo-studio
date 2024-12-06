@@ -7,6 +7,8 @@ import Choose from '../components/sections/Choose';
 import Contacts from '../components/sections/Contacts';
 import Footer from '../components/sections/Footer';
 
+import ContactForm from '@/components/ui/ContactForm';
+
 export default function Home() {
   return (
     <>
@@ -17,6 +19,7 @@ export default function Home() {
       <Choose />
       <Contacts />
       <Footer />
+      <ContactForm />
     </>
   );
 }
