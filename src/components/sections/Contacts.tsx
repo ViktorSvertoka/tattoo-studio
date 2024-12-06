@@ -1,6 +1,6 @@
 const Contacts = () => {
   return (
-    <section className="mt-[134px]">
+    <section id="contacts" className="mt-[134px]">
       <div className="container lg:items-center flex xs:flex-col sm:flex-col lg:flex-row lg:justify-between">
         <div className="flex flex-col items-center">
           <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mt-[24px] sm:mt-[40px] lg:mt-[100px] xs:mb-[32px] sm:mb-[40px] lg:mb-[30px] xs:text-center sm:text-center lg:text-center">
