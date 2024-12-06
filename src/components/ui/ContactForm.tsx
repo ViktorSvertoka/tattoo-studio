@@ -1,7 +1,9 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function ContactForm() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -23,6 +25,8 @@ export default function ContactForm() {
     const result = await response.json();
     if (result.success) {
       console.log('Form submitted successfully:', result);
+      (event.target as HTMLFormElement).reset();
+      setIsSubmitted(true);
     } else {
       console.error('Form submission failed:', result);
     }
@@ -41,7 +45,13 @@ export default function ContactForm() {
           id="name"
           name="name"
           type="text"
-          className="text-gray rounded-[4px] border border-darkOrange bg-transparent outline-none focus:border-white h-[50px] mb-[16px] pl-[10px]"
+          required
+          disabled={isSubmitted}
+          className={`rounded-[4px] border h-[50px] mb-[16px] pl-[10px] outline-none ${
+            isSubmitted
+              ? 'border-[#888888] text-gray'
+              : 'border-darkOrange bg-transparent text-gray focus:border-white'
+          }`}
         />
         <label htmlFor="email" className="text-gray font-playfair text-[16px]">
           Email
@@ -50,7 +60,13 @@ export default function ContactForm() {
           id="email"
           name="email"
           type="email"
-          className="text-gray rounded-[4px] border border-darkOrange bg-transparent outline-none focus:border-white h-[50px] mb-[16px] pl-[10px]"
+          required
+          disabled={isSubmitted}
+          className={`rounded-[4px] border h-[50px] mb-[16px] pl-[10px] outline-none ${
+            isSubmitted
+              ? 'border-[#888888] text-gray'
+              : 'border-darkOrange bg-transparent text-gray focus:border-white'
+          }`}
         />
         <label htmlFor="phone" className="text-gray font-playfair text-[16px]">
           Phone
@@ -59,7 +75,13 @@ export default function ContactForm() {
           id="phone"
           name="phone"
           type="tel"
-          className="text-gray rounded-[4px] border border-darkOrange bg-transparent outline-none focus:border-white h-[50px] mb-[16px] pl-[10px]"
+          required
+          disabled={isSubmitted}
+          className={`rounded-[4px] border h-[50px] mb-[16px] pl-[10px] outline-none ${
+            isSubmitted
+              ? 'border-[#888888] text-gray'
+              : 'border-darkOrange bg-transparent text-gray focus:border-white'
+          }`}
         />
         <label
           htmlFor="message"
@@ -70,16 +92,27 @@ export default function ContactForm() {
         <textarea
           id="message"
           name="message"
-          className="text-gray rounded-[4px] border border-darkOrange bg-transparent outline-none focus:border-white h-[110px] pl-[10px]"
+          required
+          disabled={isSubmitted}
+          className={`rounded-[4px] border h-[110px] pl-[10px] outline-none ${
+            isSubmitted
+              ? 'border-[#888888] text-gray'
+              : 'border-darkOrange bg-transparent text-gray focus:border-white'
+          }`}
         ></textarea>
         <p className="text-gray mt-[13px] xs:text-[12px]">
           Giving your information you agree with privacy policy.
         </p>
         <button
           type="submit"
-          className="hover:text-black text-darkOrange hover:bg-darkOrange bg-transparent focus:border-transparent border-2 hover:border-2 hover:border-darkOrange border-darkOrange text-[24px] xs:w-[220px] sm:w-[220px] lg:w-[220px] rounded-[50px] py-4 flex items-center justify-center mt-[45px] ml-auto mr-auto xs:mb-[32px]"
+          disabled={isSubmitted}
+          className={`text-[24px] xs:w-[220px] sm:w-[220px] lg:w-[220px] rounded-[50px] py-4 flex items-center justify-center mt-[45px] ml-auto mr-auto xs:mb-[32px] ${
+            isSubmitted
+              ? 'text-gray border-[#888888] bg-transparent'
+              : 'text-darkOrange border-darkOrange hover:bg-darkOrange hover:text-black'
+          }`}
         >
-          Submit
+          {isSubmitted ? 'Submitted' : 'Submit'}
         </button>
       </form>
     </>
