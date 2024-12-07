@@ -40,7 +40,7 @@ export default function ContactForm() {
         className="flex flex-col xs:w-[300px] sm:w-[400px] lg:w-[458px] m-auto mb-[60px]"
       >
         {formFields.map(field => (
-          <div key={field.id} className="mb-[16px]">
+          <React.Fragment key={field.id}>
             <label
               htmlFor={field.id}
               className="text-gray font-playfair text-[16px]"
@@ -66,14 +66,14 @@ export default function ContactForm() {
                 type={field.type}
                 required={field.required}
                 disabled={isSubmitted}
-                className={`rounded-[4px] border h-[50px] pl-[10px] outline-none ${
+                className={`rounded-[4px] border h-[50px] mb-[16px] pl-[10px] outline-none ${
                   isSubmitted
                     ? 'border-gray text-gray bg-transparent'
                     : 'border-darkOrange bg-transparent text-gray focus:border-white'
                 }`}
               />
             )}
-          </div>
+          </React.Fragment>
         ))}
         <p className="text-gray mt-[13px] xs:text-[12px]">
           Giving your information you agree with privacy policy.
