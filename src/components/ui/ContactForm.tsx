@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { formFields } from '../../data/dataForm';
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -38,68 +39,42 @@ export default function ContactForm() {
         onSubmit={handleSubmit}
         className="flex flex-col xs:w-[300px] sm:w-[400px] lg:w-[458px] m-auto mb-[60px]"
       >
-        <label htmlFor="name" className="text-gray font-playfair text-[16px]">
-          Name
-        </label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          required
-          disabled={isSubmitted}
-          className={`rounded-[4px] border h-[50px] mb-[16px] pl-[10px] outline-none ${
-            isSubmitted
-              ? 'border-gray text-gray bg-black'
-              : 'border-darkOrange bg-transparent text-gray focus:border-white'
-          }`}
-        />
-        <label htmlFor="email" className="text-gray font-playfair text-[16px]">
-          Email
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          required
-          disabled={isSubmitted}
-          className={`rounded-[4px] border h-[50px] mb-[16px] pl-[10px] outline-none ${
-            isSubmitted
-              ? 'border-gray text-gray bg-black'
-              : 'border-darkOrange bg-transparent text-gray focus:border-white'
-          }`}
-        />
-        <label htmlFor="phone" className="text-gray font-playfair text-[16px]">
-          Phone
-        </label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          required
-          disabled={isSubmitted}
-          className={`rounded-[4px] border h-[50px] mb-[16px] pl-[10px] outline-none ${
-            isSubmitted
-              ? 'border-gray text-gray bg-black'
-              : 'border-darkOrange bg-transparent text-gray focus:border-white'
-          }`}
-        />
-        <label
-          htmlFor="message"
-          className="text-gray font-playfair text-[16px]"
-        >
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          required
-          disabled={isSubmitted}
-          className={`rounded-[4px] border h-[110px] pl-[10px] outline-none ${
-            isSubmitted
-              ? 'border-gray text-gray bg-black'
-              : 'border-darkOrange bg-transparent text-gray focus:border-white'
-          }`}
-        ></textarea>
+        {formFields.map(field => (
+          <div key={field.id} className="mb-[16px]">
+            <label
+              htmlFor={field.id}
+              className="text-gray font-playfair text-[16px]"
+            >
+              {field.label}
+            </label>
+            {field.type === 'textarea' ? (
+              <textarea
+                id={field.id}
+                name={field.name}
+                required={field.required}
+                disabled={isSubmitted}
+                className={`rounded-[4px] border h-[110px] pl-[10px] outline-none ${
+                  isSubmitted
+                    ? 'border-gray text-gray bg-transparent'
+                    : 'border-darkOrange bg-transparent text-gray focus:border-white'
+                }`}
+              ></textarea>
+            ) : (
+              <input
+                id={field.id}
+                name={field.name}
+                type={field.type}
+                required={field.required}
+                disabled={isSubmitted}
+                className={`rounded-[4px] border h-[50px] pl-[10px] outline-none ${
+                  isSubmitted
+                    ? 'border-gray text-gray bg-transparent'
+                    : 'border-darkOrange bg-transparent text-gray focus:border-white'
+                }`}
+              />
+            )}
+          </div>
+        ))}
         <p className="text-gray mt-[13px] xs:text-[12px]">
           Giving your information you agree with privacy policy.
         </p>
