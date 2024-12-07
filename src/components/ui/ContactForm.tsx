@@ -49,7 +49,7 @@ export default function ContactForm() {
           disabled={isSubmitted}
           className={`rounded-[4px] border h-[50px] mb-[16px] pl-[10px] outline-none ${
             isSubmitted
-              ? 'border-[#888888] text-gray'
+              ? 'border-gray text-gray bg-black'
               : 'border-darkOrange bg-transparent text-gray focus:border-white'
           }`}
         />
@@ -64,7 +64,7 @@ export default function ContactForm() {
           disabled={isSubmitted}
           className={`rounded-[4px] border h-[50px] mb-[16px] pl-[10px] outline-none ${
             isSubmitted
-              ? 'border-[#888888] text-gray'
+              ? 'border-gray text-gray bg-black'
               : 'border-darkOrange bg-transparent text-gray focus:border-white'
           }`}
         />
@@ -79,7 +79,7 @@ export default function ContactForm() {
           disabled={isSubmitted}
           className={`rounded-[4px] border h-[50px] mb-[16px] pl-[10px] outline-none ${
             isSubmitted
-              ? 'border-[#888888] text-gray'
+              ? 'border-gray text-gray bg-black'
               : 'border-darkOrange bg-transparent text-gray focus:border-white'
           }`}
         />
@@ -96,7 +96,7 @@ export default function ContactForm() {
           disabled={isSubmitted}
           className={`rounded-[4px] border h-[110px] pl-[10px] outline-none ${
             isSubmitted
-              ? 'border-[#888888] text-gray'
+              ? 'border-gray text-gray bg-black'
               : 'border-darkOrange bg-transparent text-gray focus:border-white'
           }`}
         ></textarea>
@@ -106,10 +106,10 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitted}
-          className={`text-[24px] xs:w-[220px] sm:w-[220px] lg:w-[220px] rounded-[50px] py-4 flex items-center justify-center mt-[45px] ml-auto mr-auto xs:mb-[32px] ${
+          className={`text-[24px] xs:w-[220px] sm:w-[220px] lg:w-[220px] rounded-[50px] py-4 flex items-center justify-center mt-[45px] ml-auto mr-auto xs:mb-[32px] border-2 ${
             isSubmitted
-              ? 'text-gray border-[#888888] bg-transparent'
-              : 'text-darkOrange border-darkOrange hover:bg-darkOrange hover:text-black'
+              ? 'text-gray border-gray bg-transparent'
+              : 'text-darkOrange border-darkOrange bg-transparent hover:bg-darkOrange hover:text-black'
           }`}
         >
           {isSubmitted ? 'Submitted' : 'Submit'}
