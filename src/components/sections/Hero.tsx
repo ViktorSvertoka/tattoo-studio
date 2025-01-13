@@ -8,7 +8,7 @@ import Modal from '../ui/Modal';
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <section className="w-full h-full flex flex-col bg-heroMobile sm:bg-heroTablet lg:bg-heroDesktop bg-cover bg-center">
+    <section className="bg-bgAlpha w-full h-full flex flex-col bg-heroMobile sm:bg-heroTablet lg:bg-heroDesktop bg-cover bg-center">
       <div className="container">
         <div className="flex items-center justify-between sm:pt-[19px]">
           <a href="#">

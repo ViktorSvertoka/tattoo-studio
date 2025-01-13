@@ -3,9 +3,12 @@ import TextComponent from '../ui/TextComponent';
 
 const About = () => {
   return (
-    <section id="about">
+    <section
+      id="about"
+      className="bg-bgAlpha xs:pt-[16px] sm:pt-[60px] lg:pt-[100px]"
+    >
       <div className="container">
-        <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mt-[16px] sm:mt-[60px] lg:mt-[100px] xs:mb-[16px] sm:mb-[40px] lg:mb-[80px] text-center">
+        <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mb-[16px] sm:mb-[40px] lg:mb-[80px] text-center">
           About us
         </h2>
         <div className="flex xs:flex-col sm:flex-col lg:flex-row xs:pb-[8px] sm:pb-[60px] lg:pb-[100px]">

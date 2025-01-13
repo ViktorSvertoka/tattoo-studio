@@ -3,7 +3,7 @@ import { dataServices } from '../../data/dataServices';
 
 const Services = () => {
   return (
-    <section className="">
+    <section className="bg-bgAlpha">
       <div className="container">
         <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] xs:mb-[32px] sm:mb-[40px] lg:mb-[73px] xs:text-center sm:text-center lg:text-center">
           What we do
