@@ -12,9 +12,9 @@ export const generateMetadata = () => {
 export default function Gallery() {
   return (
     <>
-      <section>
+      <section className="bg-bgAlpha">
         <div className="container">
-          <div className="flex items-center w-full sm:mt-[20px] xs:mb-[20px] sm:mb-[20px] lg:mb-[20px]">
+          <div className="flex items-center w-full sm:pt-[20px] xs:mb-[20px] sm:mb-[20px] lg:mb-[20px]">
             <Link
               href="/"
               className="group text-white hover:text-darkOrange flex items-center mr-auto font-rye xs:text-[14px] sm:text-[24px] lg:text-[24px] transition-colors duration-300 ease-in-out"
