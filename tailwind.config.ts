@@ -31,7 +31,7 @@ const config: Config = {
         black: '#15161E',
         darkOrange: '#FF6C00',
         lightOrange: 'rgba(255, 108, 0, 0.3)',
-        bgAlpha: 'rgba(26, 27, 40, 0.9)',
+        bgAlpha: 'rgba(21, 22, 30, 0.90)',
       },
       fontFamily: {
         rye: ['Rye', 'serif'],
