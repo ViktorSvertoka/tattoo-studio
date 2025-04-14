@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
+import { TbMenuDeep } from 'react-icons/tb';
 import Navbar from '../ui/Navbar';
 import Logo from '../../../public/icons/logo.svg';
-import Menu from '../../../public/icons/mobile-menu.svg';
 import Modal from '../ui/Modal';
 import MobileMenu from '../ui/MobileMenu';
 
@@ -23,7 +23,7 @@ const Hero = () => {
           </a>
           <Navbar />
           <button className="md:hidden" type="button" onClick={toggleMenu}>
-            <Menu width={36} height={36} />
+            <TbMenuDeep className="text-white hover:text-darkOrange w-[40px] h-[40px]" />
           </button>
         </div>
 
