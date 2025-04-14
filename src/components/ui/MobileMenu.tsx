@@ -1,5 +1,6 @@
 import React from 'react';
 import { RiCloseLine } from 'react-icons/ri';
+import { navLinks } from '../../data/dataLinks';
 
 interface MobileMenuProps {
   setIsMenuOpen: (value: boolean) => void;
@@ -16,21 +17,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ setIsMenuOpen }) => {
         <RiCloseLine className="text-white hover:text-darkOrange w-[40px] h-[40px]" />
       </button>
       <nav className="flex flex-col gap-6 text-xl">
-        <a href="#about" onClick={() => setIsMenuOpen(false)}>
-          About
-        </a>
-        <a href="#artists" onClick={() => setIsMenuOpen(false)}>
-          Artists
-        </a>
-        <a href="#contacts" onClick={() => setIsMenuOpen(false)}>
-          Contacts
-        </a>
-        <a href="#gallery" onClick={() => setIsMenuOpen(false)}>
-          Gallery
-        </a>
-        <a href="#blog" onClick={() => setIsMenuOpen(false)}>
-          Blog
-        </a>
+        {navLinks.map(({ id, href, label }) => (
+          <a key={id} href={`#${href}`} onClick={() => setIsMenuOpen(false)}>
+            {label}
+          </a>
+        ))}
       </nav>
     </div>
   );
