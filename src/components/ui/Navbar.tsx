@@ -5,15 +5,15 @@ import { navLinks } from '../../data/dataLinks';
 
 const Navbar = () => {
   return (
-    <nav className="xs:hidden sm:block lg:block">
-      <div className="flex sm:gap-[32px] lg:gap-[38px] lg:pt-[19px] lg:pb-5">
+    <nav aria-label="Main navigation" className="hidden sm:block">
+      <div className="flex items-center gap-8 lg:gap-10">
         {navLinks.map(({ id, href, label }) => {
           const isExternal = href === 'gallery' || href === 'blog';
           return isExternal ? (
             <Link
               key={id}
               href={`/${href}`}
-              className="text-white font-playfair lg:text-[20px] font-medium leading-[30px] hover:text-[darkOrange] cursor-pointer"
+              className="cursor-pointer rounded-sm font-playfair text-[18px] font-medium leading-8 text-white transition-colors hover:text-darkOrange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-darkOrange focus-visible:ring-offset-4 focus-visible:ring-offset-black lg:text-[20px]"
             >
               {label}
             </Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
               spy={true}
               duration={500}
               offset={-100}
-              className="text-white font-playfair lg:text-[20px] font-medium leading-[30px] hover:text-[darkOrange] cursor-pointer"
+              className="cursor-pointer rounded-sm font-playfair text-[18px] font-medium leading-8 text-white transition-colors hover:text-darkOrange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-darkOrange focus-visible:ring-offset-4 focus-visible:ring-offset-black lg:text-[20px]"
             >
               {label}
             </ScrollLink>

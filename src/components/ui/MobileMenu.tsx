@@ -8,7 +8,10 @@ interface MobileMenuProps {
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ setIsMenuOpen }) => {
   return (
-    <div className="absolute top-0 left-0 w-full h-screen bg-black z-50 flex flex-col items-center justify-center text-white">
+    <div
+      id="mobile-navigation"
+      className="absolute top-0 left-0 w-full h-screen bg-black z-50 flex flex-col items-center justify-center text-white"
+    >
       <button
         onClick={() => setIsMenuOpen(false)}
         className="absolute top-5 right-5 text-3xl"
