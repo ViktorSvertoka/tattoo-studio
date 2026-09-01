@@ -1,8 +1,8 @@
 const dataChoose = [
-  { id: 1, number: '15K', text: 'Tattoo done' },
-  { id: 2, number: '4K', text: 'Satisfied customers' },
-  { id: 3, number: '17+', text: 'Award winning' },
-  { id: 4, number: '1.2K', text: 'Piercing done' },
+  { id: 1, number: '15K', text: 'Tattoos completed' },
+  { id: 2, number: '4K', text: 'Happy clients' },
+  { id: 3, number: '17+', text: 'Awards won' },
+  { id: 4, number: '1.2K', text: 'Piercings completed' },
 ];
 
 const Choose = () => {
@@ -12,16 +12,18 @@ const Choose = () => {
         <h2 className="mb-10 text-center font-rye text-[32px] text-white sm:mb-12 sm:text-[48px] lg:mb-14">
           Why choose us
         </h2>
-        <ul className="flex justify-center xs:flex-col sm:flex-row lg:flex-row gap-[24px]">
+        <ul className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-6">
           {dataChoose.map(({ id, number, text }) => (
             <li
               key={id}
-              className="flex flex-col items-center text-center gap-[30px] py-[30px] w-[302px]"
+              className="flex min-h-[180px] flex-col items-center justify-center rounded-2xl border border-white/10 bg-[#191a22] px-4 py-8 text-center"
             >
-              <h4 className="text-darkOrange font-orelega text-[40px]">
+              <strong className="font-orelega text-[42px] leading-none text-darkOrange sm:text-[48px]">
                 {number}
-              </h4>
-              <p className="text-gray font-playfair text-[16px]">{text}</p>
+              </strong>
+              <p className="mt-5 font-playfair text-[16px] text-[#b8b8b8] sm:text-[17px]">
+                {text}
+              </p>
             </li>
           ))}
         </ul>
