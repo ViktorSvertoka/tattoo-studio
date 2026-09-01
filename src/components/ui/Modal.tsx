@@ -1,5 +1,5 @@
-import { RiCloseLine } from 'react-icons/ri';
 import { useEffect } from 'react';
+import { RiCloseLine } from 'react-icons/ri';
 import ContactForm from './ContactForm';
 
 interface ModalProps {
@@ -36,23 +36,33 @@ const Modal: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <div
-      className="bg-black/20 w-screen h-screen z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
       onClick={handleBackdropClick}
+      role="presentation"
     >
-      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="bg-black rounded-[25px] xs:w-[343px] xs:h-[680px] sm:w-[506px] sm:h-[740px] lg:w-[680px] lg:h-[750px] border-2 border-[darkOrange]">
-          <button
-            className="cursor-pointer py-[16px] px-[16px] absolute right-0 top-0"
-            onClick={() => setIsOpen(false)}
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="booking-dialog-title"
+        className="relative max-h-[92vh] w-full max-w-[680px] overflow-y-auto rounded-3xl border border-darkOrange/70 bg-[#191a22] shadow-2xl"
+      >
+        <button
+          type="button"
+          autoFocus
+          aria-label="Close booking form"
+          className="absolute right-3 top-3 z-10 cursor-pointer rounded-full p-3 text-white transition-colors hover:text-darkOrange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-darkOrange"
+          onClick={() => setIsOpen(false)}
+        >
+          <RiCloseLine className="h-10 w-10" aria-hidden="true" />
+        </button>
+        <div className="p-6 pt-20 sm:p-10 sm:pt-16">
+          <h2
+            id="booking-dialog-title"
+            className="font-rye text-[30px] text-white sm:text-[42px]"
           >
-            <RiCloseLine className="text-white hover:text-darkOrange w-[40px] h-[40px]" />
-          </button>
-          <div className="xs:p-[20px] p-[50px]">
-            <h2 className="text-white font-rye xs:text-[24px] sm:text-[36px] lg:text-[48px] xs:text-center sm:text-center lg:text-center">
-              Online-booking
-            </h2>
-            <ContactForm />
-          </div>
+            Book an appointment
+          </h2>
+          <ContactForm idPrefix="booking-dialog" />
         </div>
       </div>
     </div>

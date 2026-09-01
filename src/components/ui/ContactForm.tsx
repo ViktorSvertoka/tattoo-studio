@@ -1,95 +1,124 @@
 'use client';
-import React, { useState } from 'react';
+
+import { useState, type FormEvent } from 'react';
 import { formFields } from '../../data/dataForm';
 
-export default function ContactForm() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+type SubmissionStatus = 'idle' | 'submitting' | 'success' | 'error';
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+interface ContactFormProps {
+  idPrefix?: string;
+}
+
+export default function ContactForm({
+  idPrefix = 'contact',
+}: ContactFormProps) {
+  const [status, setStatus] = useState<SubmissionStatus>('idle');
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setStatus('submitting');
 
-    const formData = new FormData(event.target as HTMLFormElement);
-    formData.append('access_key', process.env.NEXT_PUBLIC_ACCESS_KEY || '');
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    formData.append('access_key', process.env.NEXT_PUBLIC_ACCESS_KEY ?? '');
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+      const result = await response.json();
 
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: json,
-    });
+      if (!response.ok || !result.success) {
+        throw new Error('Form submission failed');
+      }
 
-    const result = await response.json();
-    if (result.success) {
-      console.log('Form submitted successfully:', result);
-      (event.target as HTMLFormElement).reset();
-      setIsSubmitted(true);
-    } else {
-      console.error('Form submission failed:', result);
+      form.reset();
+      setStatus('success');
+    } catch {
+      setStatus('error');
     }
   }
 
+  const isSubmitting = status === 'submitting';
+  const isSubmitted = status === 'success';
+  const isDisabled = isSubmitting || isSubmitted;
+  const fieldClassName =
+    'w-full rounded-xl border border-white/20 bg-black/20 px-4 font-playfair text-[17px] text-white outline-none transition-colors placeholder:text-gray focus-visible:border-darkOrange focus-visible:ring-2 focus-visible:ring-darkOrange/30 disabled:cursor-not-allowed disabled:opacity-60';
+
   return (
-    <>
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col xs:w-[300px] sm:w-[400px] lg:w-[458px] m-auto mb-[60px]"
-      >
-        {formFields.map(field => (
-          <React.Fragment key={field.id}>
+    <form
+      onSubmit={handleSubmit}
+      aria-busy={isSubmitting}
+      className="mt-8 flex w-full max-w-[560px] flex-col gap-5"
+    >
+      {formFields.map(field => {
+        const fieldId = `${idPrefix}-${field.id}`;
+
+        return (
+          <div key={fieldId} className="flex flex-col gap-2">
             <label
-              htmlFor={field.id}
-              className="text-gray font-playfair text-[16px]"
+              htmlFor={fieldId}
+              className="font-playfair text-[16px] font-medium text-[#d0d0d0]"
             >
               {field.label}
             </label>
             {field.type === 'textarea' ? (
               <textarea
-                id={field.id}
+                id={fieldId}
                 name={field.name}
                 required={field.required}
-                disabled={isSubmitted}
-                className={`rounded-[4px] border h-[110px] pl-[10px] outline-none ${
-                  isSubmitted
-                    ? 'border-gray text-gray bg-transparent'
-                    : 'border-darkOrange bg-transparent text-gray focus:border-white'
-                }`}
-              ></textarea>
+                disabled={isDisabled}
+                className={`${fieldClassName} min-h-32 resize-y py-3`}
+              />
             ) : (
               <input
-                id={field.id}
+                id={fieldId}
                 name={field.name}
                 type={field.type}
                 required={field.required}
-                disabled={isSubmitted}
-                className={`rounded-[4px] border h-[50px] mb-[16px] pl-[10px] outline-none ${
-                  isSubmitted
-                    ? 'border-gray text-gray bg-transparent'
-                    : 'border-darkOrange bg-transparent text-gray focus:border-white'
-                }`}
+                disabled={isDisabled}
+                autoComplete={field.name === 'phone' ? 'tel' : field.name}
+                className={`${fieldClassName} h-12`}
               />
             )}
-          </React.Fragment>
-        ))}
-        <p className="text-gray mt-[13px] xs:text-[12px]">
-          Giving your information you agree with privacy policy.
+          </div>
+        );
+      })}
+
+      <p className="font-playfair text-[13px] leading-relaxed text-[#a8a8a8]">
+        By submitting this form, you agree that we may contact you about your
+        appointment request.
+      </p>
+
+      {status === 'success' ? (
+        <p role="status" className="font-playfair text-[16px] text-green-400">
+          Thank you. Your request has been sent successfully.
         </p>
-        <button
-          type="submit"
-          disabled={isSubmitted}
-          className={`text-[24px] xs:w-[220px] sm:w-[220px] lg:w-[220px] rounded-[50px] py-4 flex items-center justify-center mt-[45px] ml-auto mr-auto border-2 ${
-            isSubmitted
-              ? 'text-gray border-gray bg-transparent'
-              : 'text-darkOrange border-darkOrange bg-transparent hover:bg-darkOrange hover:text-black'
-          }`}
-        >
-          {isSubmitted ? 'Submitted' : 'Submit'}
-        </button>
-      </form>
-    </>
+      ) : null}
+
+      {status === 'error' ? (
+        <p role="alert" className="font-playfair text-[16px] text-red-400">
+          We could not send your request. Please try again or contact us by
+          phone.
+        </p>
+      ) : null}
+
+      <button
+        type="submit"
+        disabled={isDisabled}
+        className="mt-2 flex min-h-14 w-full items-center justify-center rounded-full border-2 border-darkOrange bg-transparent px-8 text-[20px] text-darkOrange transition-colors hover:bg-darkOrange hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-[#191a22] disabled:cursor-not-allowed disabled:border-gray disabled:text-gray disabled:hover:bg-transparent sm:w-auto sm:min-w-[220px] sm:self-start"
+      >
+        {isSubmitting
+          ? 'Sending…'
+          : isSubmitted
+            ? 'Request sent'
+            : 'Send request'}
+      </button>
+    </form>
   );
 }
