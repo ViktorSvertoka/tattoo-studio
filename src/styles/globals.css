@@ -45,6 +45,21 @@ body {
   min-height: 100%;
 }
 
+:where(
+  a[href],
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  input[type='button']:not(:disabled),
+  input[type='submit']:not(:disabled),
+  input[type='reset']:not(:disabled),
+  label[for],
+  select:not(:disabled),
+  summary
+) {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
 p,
 h1,
 h2,
@@ -103,6 +118,7 @@ h6 {
   border-radius: 9999px;
   background: #666873;
   opacity: 1;
+  cursor: pointer;
   transition:
     width 200ms ease,
     background-color 200ms ease;
