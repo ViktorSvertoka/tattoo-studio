@@ -44,8 +44,8 @@ const Hero = () => {
 
         {isMenuOpen && <MobileMenu setIsMenuOpen={setIsMenuOpen} />}
 
-        <div className="mx-auto flex max-w-[707px] flex-col items-center pt-[360px] text-center sm:mx-0 sm:items-start sm:pt-[500px] sm:text-left lg:pt-28">
-          <h1 className="font-rye text-[36px] font-normal leading-none text-white sm:max-w-[650px] sm:text-[64px] sm:leading-[1.08] lg:text-[80px] lg:leading-none">
+        <div className="mx-auto flex max-w-[800px] flex-col items-center pt-[360px] text-center sm:mx-0 sm:items-start sm:pt-[500px] sm:text-left lg:pt-28">
+          <h1 className="font-rye text-[36px] font-normal leading-none text-white sm:max-w-[650px] sm:text-[64px] sm:leading-[1.08] lg:max-w-[800px] lg:text-[80px] lg:leading-none">
             GOOD LUCK TATTOO STUDIO
           </h1>
           <p className="mt-6 max-w-[380px] font-playfair text-[18px] leading-relaxed text-white sm:mt-8 sm:text-[22px] lg:text-[24px]">
