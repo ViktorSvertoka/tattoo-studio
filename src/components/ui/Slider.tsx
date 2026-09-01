@@ -44,12 +44,12 @@ export default function Slider() {
         prevSlideMessage: 'Show previous artist',
         paginationBulletMessage: 'Show artist group {{index}}',
       }}
-      className="mySwiper pb-14 [--swiper-navigation-color:#ff6c00] [--swiper-pagination-color:#ff6c00]"
+      className="mySwiper h-[476px] pb-14 [--swiper-navigation-color:#ff6c00] [--swiper-pagination-color:#ff6c00]"
     >
       {teamMembers.map(({ src, name }, index) => (
         <SwiperSlide
           key={index}
-          className="relative h-[420px] overflow-hidden rounded-3xl shadow-card"
+          className="relative overflow-hidden rounded-3xl shadow-card"
         >
           <Image
             src={src}
