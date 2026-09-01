@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/components/sections/Footer';
+import PageHeader from '@/components/ui/PageHeader';
 import { blogPosts, featuredPost } from '@/data/dataBlog';
-import Logo from '../../../public/icons/logo.svg';
 
 export const metadata: Metadata = {
   title: 'Tattoo Blog | Good Luck Tattoo Studio',
@@ -15,35 +15,11 @@ export default function Blog() {
   return (
     <>
       <main className="min-h-screen bg-bgAlpha">
-        <header className="border-b border-white/10 bg-black/60">
-          <div className="container flex min-h-20 items-center justify-between gap-6 lg:min-h-24">
-            <Link
-              href="/"
-              aria-label="Good Luck Tattoo Studio home"
-              className="inline-flex items-center gap-3 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-darkOrange"
-            >
-              <Logo width={40} height={40} aria-hidden="true" />
-              <span className="hidden font-rye text-[18px] text-white sm:inline lg:text-[20px]">
-                Good Luck Tattoo Studio
-              </span>
-            </Link>
-
-            <nav aria-label="Blog navigation" className="flex items-center gap-6">
-              <Link
-                href="/"
-                className="rounded-sm font-playfair text-[16px] text-white transition-colors hover:text-darkOrange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-darkOrange sm:text-[18px]"
-              >
-                Home
-              </Link>
-              <Link
-                href="/gallery"
-                className="rounded-sm font-playfair text-[16px] text-white transition-colors hover:text-darkOrange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-darkOrange sm:text-[18px]"
-              >
-                Gallery
-              </Link>
-            </nav>
-          </div>
-        </header>
+        <PageHeader
+          navigationLabel="Blog navigation"
+          secondaryHref="/gallery"
+          secondaryLabel="Gallery"
+        />
 
         <section className="container pb-16 pt-14 sm:pb-20 sm:pt-20 lg:pb-24 lg:pt-24">
           <div className="mx-auto max-w-[820px] text-center">

@@ -1,7 +1,6 @@
-import Link from 'next/link';
-import GridList from '../../components/ui/GridList';
-import GoBack from '../../../public/icons/go-back-arrow.svg';
 import Footer from '@/components/sections/Footer';
+import GridList from '@/components/ui/GridList';
+import PageHeader from '@/components/ui/PageHeader';
 
 export const generateMetadata = () => {
   return {
@@ -12,38 +11,29 @@ export const generateMetadata = () => {
 export default function Gallery() {
   return (
     <>
-      <section className="bg-bgAlpha">
-        <div className="container">
-          <div className="flex items-center w-full sm:pt-[20px] xs:mb-[20px] sm:mb-[20px] lg:mb-[20px]">
-            <Link
-              href="/"
-              className="group text-white hover:text-darkOrange flex items-center mr-auto font-rye xs:text-[14px] sm:text-[24px] lg:text-[24px] transition-colors duration-300 ease-in-out"
-            >
-              <GoBack
-                width={40}
-                height={40}
-                className="mr-4 transition-colors duration-300 ease-in-out group-hover:fill-white"
-              />
-              Go Home
-            </Link>
-            <h2 className="text-white font-rye xs:text-[32px] sm:text-[48px] lg:text-[48px] text-center flex-grow">
+      <main className="min-h-screen bg-bgAlpha">
+        <PageHeader
+          navigationLabel="Gallery navigation"
+          secondaryHref="/blog"
+          secondaryLabel="Blog"
+        />
+
+        <section className="container pb-16 pt-14 sm:pb-20 sm:pt-20 lg:pb-24 lg:pt-24">
+          <div className="mx-auto mb-10 max-w-[720px] text-center sm:mb-14">
+            <p className="font-playfair text-[15px] font-semibold uppercase tracking-[0.24em] text-darkOrange sm:text-[16px]">
+              Selected work
+            </p>
+            <h1 className="mt-4 text-balance font-rye text-[42px] leading-tight text-white sm:text-[64px] lg:text-[76px]">
               Gallery
-            </h2>
-            <Link
-              href="/blog"
-              className="group text-white hover:text-darkOrange flex items-center ml-auto font-rye xs:text-[14px] sm:text-[24px] lg:text-[24px] transition-colors duration-300 ease-in-out"
-            >
-              Go Blog
-              <GoBack
-                className="rotate-180 ml-4 transition-colors duration-300 ease-in-out group-hover:fill-white"
-                width={40}
-                height={40}
-              />
-            </Link>
+            </h1>
+            <p className="mx-auto mt-6 max-w-[600px] text-pretty font-playfair text-[17px] leading-relaxed text-[#b8b8b8] sm:text-[20px]">
+              A closer look at the detail, character, and craft behind our
+              recent tattoo work.
+            </p>
           </div>
           <GridList />
-        </div>
-      </section>
+        </section>
+      </main>
       <Footer />
     </>
   );
