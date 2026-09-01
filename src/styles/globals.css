@@ -88,24 +88,27 @@ h6 {
   box-shadow: 0 4px 15px 0 rgba(70, 31, 12, 0.4);
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  width: 44px !important;
-  height: 44px !important;
-  border: 1px solid rgba(255, 108, 0, 0.65);
+.artists-pagination {
+  position: static !important;
+  display: flex;
+  width: auto !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.artists-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px !important;
   border-radius: 9999px;
-  background: rgba(21, 22, 30, 0.84);
-  --swiper-navigation-size: 18px;
+  background: #666873;
+  opacity: 1;
+  transition:
+    width 200ms ease,
+    background-color 200ms ease;
 }
 
-.swiper-button-next:focus-visible,
-.swiper-button-prev:focus-visible {
-  outline: 2px solid #f5f3f3;
-  outline-offset: 3px;
-}
-
-.swiper-pagination-bullet {
-  background: #ff6c00 !important;
-  width: 12px !important;
-  height: 12px !important;
+.artists-pagination .swiper-pagination-bullet-active {
+  width: 24px;
+  background: #ff6c00;
 }
