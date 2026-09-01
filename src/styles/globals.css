@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import 'tailwindcss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 834px;
+  --breakpoint-lg: 1440px;
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --color-white: #f5f3f3;
+  --color-gray: #888888;
+  --color-darkGray: #263238;
+  --color-black: #15161e;
+  --color-darkOrange: #ff6c00;
+  --color-lightOrange: rgb(255 108 0 / 30%);
+  --color-bgAlpha: rgb(21 22 30 / 95%);
+
+  --font-rye: 'Rye', serif;
+  --font-playfair: 'Playfair Display', serif;
+  --font-orelega: 'Orelega One', serif;
+
+  --background-image-heroDesktop: url('/images/hero-desktop-2x.png');
+  --background-image-heroTablet: url('/images/hero-tablet-2x.png');
+  --background-image-heroMobile: url('/images/hero-mobile-2x.png');
+  --background-image-contactsDesktop: url('/images/contacts-desktop-2x.png');
+  --background-image-contactsTablet: url('/images/contacts-tablet-2x.png');
+  --background-image-contactsMobile: url('/images/contacts-mobile-2x.png');
 }
 
 html {
@@ -26,28 +40,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  width: 100vw;
-  height: 100vh;
-}
-
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-ul,
-ol,
-li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
+  min-height: 100%;
 }
 
 p,

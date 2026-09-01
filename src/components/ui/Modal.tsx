@@ -14,13 +14,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
     }
   };
 
-  const handleEscape = (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      setIsOpen(false);
-    }
-  };
-
   useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
     if (isOpen) {
       document.body.style.overflow = 'hidden';
       window.addEventListener('keydown', handleEscape);
@@ -30,7 +30,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, setIsOpen }) => {
       document.body.style.overflow = 'auto';
       window.removeEventListener('keydown', handleEscape);
     };
-  }, [isOpen]);
+  }, [isOpen, setIsOpen]);
 
   if (!isOpen) return null;
 
