@@ -53,26 +53,24 @@ h6 {
   overflow-wrap: break-word;
 }
 
-@media screen and (min-width: 375px) {
-  .container {
-    width: 375px;
-    margin: 0 auto;
-    padding: 16px 16px 0 16px;
-  }
+.container {
+  width: min(calc(100% - 32px), 1376px);
+  margin-inline: auto;
 }
 
 @media screen and (min-width: 834px) {
   .container {
-    width: 834px;
-    margin: 0 auto;
-    padding: 0 32px;
+    width: min(calc(100% - 64px), 1376px);
   }
 }
 
+.section-shell {
+  padding-block: 64px;
+}
+
 @media screen and (min-width: 1440px) {
-  .container {
-    width: 1440px;
-    margin: 0 auto;
+  .section-shell {
+    padding-block: 80px;
   }
 }
 
