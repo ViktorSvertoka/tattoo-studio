@@ -9,7 +9,7 @@ const Services = () => {
           What we do
         </h2>
         <div>
-          <ul className="flex flex-col justify-center gap-6 sm:flex-row sm:flex-wrap">
+          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {dataServices.map(({ id, imageSrc, title, text }) => (
               <ServiceCard
                 key={id}

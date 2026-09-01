@@ -8,10 +8,14 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ imageSrc, title, text }) => {
   return (
-    <li className="flex flex-col items-center text-center gap-[30px] py-[30px] w-[302px]">
-      <Image src={imageSrc} alt={`${title} icon`} width={40} height={40} />
-      <h4 className="text-darkOrange font-rye text-[24px]">{title}</h4>
-      <p className="text-gray font-playfair text-[16px]">{text}</p>
+    <li className="flex min-h-[320px] flex-col items-center rounded-2xl border border-white/10 bg-[#191a22] px-6 py-8 text-center transition-transform duration-300 hover:-translate-y-1 hover:border-darkOrange/50">
+      <Image src={imageSrc} alt="" width={56} height={56} />
+      <h3 className="mt-7 font-rye text-[22px] leading-tight text-darkOrange">
+        {title}
+      </h3>
+      <p className="mt-5 font-playfair text-[16px] leading-[1.65] text-[#b8b8b8]">
+        {text}
+      </p>
     </li>
   );
 };
