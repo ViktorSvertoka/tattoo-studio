@@ -10,7 +10,7 @@ const siteUrl =
 
 const title = "Tattoo Studio";
 const description =
-  "Explore a realm of artistic expression at our Tattoo Studio. Immerse yourself in the fusion of creativity and craftsmanship as our skilled artists bring your vision to life. From vibrant designs to intricate black and gray work, we're here to make your inked memories unforgettable. Welcome to Ink Chronicles, where self-expression knows no bounds.";
+  "Express your individuality with custom tattoos by the artists at Good Luck Tattoo Studio.";
 const socialImage = {
   url: "/images/og-preview.jpg",
   width: 1200,
