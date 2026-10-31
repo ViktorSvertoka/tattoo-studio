@@ -1,7 +1,5 @@
 # Tattoo Studio
 
-Social previews use `public/images/og-preview.jpg`, a 1200 × 630 JPEG derived from `public/images/about-tablet-2x.png`. Set `NEXT_PUBLIC_SITE_URL` to the public site origin (including `https://`) to override the domain. Otherwise, it uses `VERCEL_PROJECT_PRODUCTION_URL` on Vercel and falls back to `https://tattoo-studio-navy.vercel.app`.
-
 ![Tattoo Studio home page](./public/assets/screenshoot-01.png)
 
 The home page introduces the studio, its services, artists, experience, and contact details. It includes smooth section navigation, an artist carousel, an appointment request form, direct contact links, and responsive navigation for mobile devices.
