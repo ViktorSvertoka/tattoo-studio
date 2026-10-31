@@ -1,5 +1,7 @@
 # Tattoo Studio
 
+Social previews use `public/images/about-tablet-2x.png`. Set `NEXT_PUBLIC_SITE_URL` to the public site origin (including `https://`) in the deployment environment so preview image URLs use the correct domain. On Vercel, this defaults to `VERCEL_PROJECT_PRODUCTION_URL`; local development defaults to `http://localhost:3000`.
+
 ![Tattoo Studio home page](./public/assets/screenshoot-01.png)
 
 The home page introduces the studio, its services, artists, experience, and contact details. It includes smooth section navigation, an artist carousel, an appointment request form, direct contact links, and responsive navigation for mobile devices.
