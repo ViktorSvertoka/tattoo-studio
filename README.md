@@ -1,6 +1,6 @@
 # Tattoo Studio
 
-Social previews use `public/images/about-tablet-2x.png`. Set `NEXT_PUBLIC_SITE_URL` to the public site origin (including `https://`) in the deployment environment so preview image URLs use the correct domain. On Vercel, this defaults to `VERCEL_PROJECT_PRODUCTION_URL`; local development defaults to `http://localhost:3000`.
+Social previews use `public/images/og-preview.jpg`, a 1200 × 630 JPEG derived from `public/images/about-tablet-2x.png`. Set `NEXT_PUBLIC_SITE_URL` to the public site origin (including `https://`) to override the domain. Otherwise, it uses `VERCEL_PROJECT_PRODUCTION_URL` on Vercel and falls back to `https://tattoo-studio-navy.vercel.app`.
 
 ![Tattoo Studio home page](./public/assets/screenshoot-01.png)
 

@@ -6,15 +6,16 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000");
+    : "https://tattoo-studio-navy.vercel.app");
 
 const title = "Tattoo Studio";
 const description =
   "Explore a realm of artistic expression at our Tattoo Studio. Immerse yourself in the fusion of creativity and craftsmanship as our skilled artists bring your vision to life. From vibrant designs to intricate black and gray work, we're here to make your inked memories unforgettable. Welcome to Ink Chronicles, where self-expression knows no bounds.";
 const socialImage = {
-  url: "/images/about-tablet-2x.png",
-  width: 1540,
-  height: 1000,
+  url: "/images/og-preview.jpg",
+  width: 1200,
+  height: 630,
+  type: "image/jpeg",
   alt: "Tattoo Studio",
 };
 
